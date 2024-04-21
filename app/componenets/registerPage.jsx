@@ -44,7 +44,7 @@ export default function RegisterForm() {
             
             // if user exists, then return;
             if(verified == "true") {
-                toast.warning(`Email with ${organization}, already exists!`);
+                toast.warning(`Email with ${organization} already exists!`);
                 return;
             }
 

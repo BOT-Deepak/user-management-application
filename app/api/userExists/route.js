@@ -11,7 +11,9 @@ export async function POST(req) {
         const q = query(collection(db, 'users'), where("email", "==", email), where("organization", "==", organization));
         const querySnapshot = await getDocs(q);
 
-        let user = null;
+        let user = {
+            verified: "false",
+        };
 
         querySnapshot.forEach((doc) => {
             user = doc.data();

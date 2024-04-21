@@ -2,7 +2,7 @@
 
 import { NextResponse } from "next/server";
 import db from '../../firebaseConfig';
-import { query, collection, addDoc, where } from "firebase/firestore";
+import { query, collection, addDoc, where, getDocs } from "firebase/firestore";
 
 // POST() function to register the user into the database
 
