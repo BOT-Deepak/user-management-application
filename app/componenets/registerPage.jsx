@@ -92,7 +92,7 @@ export default function RegisterForm() {
                 console.log('User registration failed.')
             }
         } catch(e) {
-            console.log('Error during registration: ', error);
+            console.log('Error during registration: ', e);
         }
     };
 
