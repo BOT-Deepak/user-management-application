@@ -4,6 +4,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Access the [webpage for user-management-application](https://user-management-application-qhphjsfb1.vercel.app/) here.
 
+I used some dummy data to understand this.
+Here are some loginInfo for dummy logins: ( Note: You cannot change password or register with this data, because mails are not real, so one won't be able to successfully verify. )
+
+`admin`:
+- Email: `red@admin.org`
+- Password: `tenet`
+- Organization: `admin.org`
+
+`manager`:
+- Email: `red@manager.org`
+- Password: `tenet`
+- Organization: `manager.org`
+
+`user`:
+- Email: `red@user.org`
+- Password: `tenet`
+- Organization: `user.org`
+
 ## Understanding the Pages
 
 - LoginPage: It asks for `Email`, `Password` and `Organization` details for login. You can only `login` after `registration` and `email verification`.
