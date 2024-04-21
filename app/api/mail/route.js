@@ -16,12 +16,17 @@ export async function POST(req) {
 
     // creating the link to be send to the email of the user.
     const confirmationLink = `${process.env.DOMAIN_NAME}/${sendL}?token=${token}&mail=${email}&org=${organization}`;
+    let messageSubject = "Verify your email";
+
+    if(sendL == "password-reset") {
+        messageSubject = "Reset your password";
+    }
 
     try {
         await resend.emails.send({
-            from: "onboarding@resend.dev",
+            from: "user-management-application@resend.dev",
             to: email,
-            subject: "Verify your email",
+            subject: `${messageSubject}`,
             html: `<p>Click <a href="${confirmationLink}">here<a/> to verify your email with ${organization}.</p>`,
         })
 
