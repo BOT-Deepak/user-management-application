@@ -107,12 +107,6 @@ export default function RegisterForm() {
                     <input type="text" placeholder="Organization" onChange={(e) => setOrganization(e.target.value)}/>
 
                     <button type="submit" className="bg-green-600 text-white font-bold cursor-pointer px-6 py-2">Register</button>
-
-                    { error && (
-                        <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-medium mt-2">
-                            {error}
-                        </div>
-                    )}
                     <Link className="text-sm mt-3 text-right" href={'/'}>
                         Already have an account? <span className="underline">Login</span>
                     </Link>
