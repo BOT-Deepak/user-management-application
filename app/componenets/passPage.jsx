@@ -2,9 +2,10 @@
 
 'use client';
 
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import db from '../firebaseConfig';
+import { useRouter } from 'next-nprogress-bar';
 import {doc, getDocs, query, collection, updateDoc, where } from "firebase/firestore";
 import { toast } from "sonner";
 import { v4 as uuidv4 } from "uuid";
@@ -128,7 +129,7 @@ export default function PasswordResetPage() {
 
     return (
         <div className="grid place-items-center h-screen">
-            <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
+            <div className="shadow-lg p-5 rounded-lg border-4 border-orange-300">
                 {spaceForDataShowing}
             </div>
         </div>

@@ -2,9 +2,8 @@
 
 'use client';
 
-import { useSearchParams, useRouter } from "next/navigation";
-import { useState } from "react";
-import { useSession } from "next-auth/react";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from 'next-nprogress-bar';
 import db from '../firebaseConfig';
 import {doc, getDocs, query, collection, setDoc, updateDoc, deleteDoc, where } from "firebase/firestore";
 import { toast } from "sonner";
@@ -54,7 +53,7 @@ export default function VerifyPage() {
 
     return (
         <div className="grid place-items-center h-screen">
-            <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
+            <div className="shadow-lg p-5 rounded-lg border-4 border-orange-300">
                 <h1 id="changethis" className="text-xl font-bold my-4">Verification Page!</h1>
                 <button 
                         onClick={handleVerify}

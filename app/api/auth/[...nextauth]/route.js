@@ -4,7 +4,7 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 import db from '../../../firebaseConfig';
-import { collection, query, where, getDocs, or } from "firebase/firestore";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
 // Making an authentication handler to verify the signIn with details and storing session of the user.
 

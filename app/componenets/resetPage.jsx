@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next-nprogress-bar';
 import { toast } from "sonner";
 
 export default function ResetPage() {
@@ -83,7 +83,7 @@ export default function ResetPage() {
 
     return (
         <div className="grid place-items-center h-screen">
-            <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
+            <div className="shadow-lg p-5 rounded-lg border-4 border-orange-300">
                 <h1 className="text-xl font-bold my-4">Reset Password</h1>
                 <form className="flex flex-col gap-3" onSubmit={handleReset}>
                     <input type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>

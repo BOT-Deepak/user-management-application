@@ -7,7 +7,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next-nprogress-bar';
 import { signIn } from "next-auth/react";
 import { toast } from "sonner";
 
@@ -68,7 +68,7 @@ export default function LoginForm() {
         // There are 2 links down, one for reset password, another for register page.
 
         <div className="grid place-items-center h-screen">
-            <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
+            <div className="shadow-lg p-5 rounded-lg border-4 border-orange-300">
                 <h1 className="text-xl font-bold my-4">Login</h1>
                 <form className="flex flex-col gap-3" onSubmit={handleLogin}>
                     <input type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>

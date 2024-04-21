@@ -167,7 +167,7 @@ export default function UserInfo() {
 
     let showTable = (
         <div>
-            <div class="max-w-3xl mx-auto">
+            <div class="max-w mx-auto">
                     <div class="flex flex-col">
                     <div class="overflow-x-auto shadow-md sm:rounded-lg">
                         <div class="inline-block min-w-full align-middle">
@@ -214,7 +214,7 @@ export default function UserInfo() {
 
     return (
         <div className="grid place-items-center h-screen">
-            <div className="shadow-lg p-10 rounded-lg border-4 border-gray-400 ">
+            <div className="shadow-lg p-10 rounded-lg border-4 border-orange-300 ">
                 <div className="text-xl font-bold">Name: <span className="font-bold text-orange-800">{session?.user?.name}</span></div>
                 <div className="text-xl font-bold">Email: <span className="font-bold text-orange-700">{session?.user?.email}</span></div>
                 <div className="text-xl font-bold">Organization: <span className="font-bold text-orange-700">{session?.user?.organization}</span></div>
