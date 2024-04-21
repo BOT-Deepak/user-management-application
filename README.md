@@ -10,7 +10,7 @@ Here are some loginInfo for dummy logins: ( Note: You cannot change password or 
 `admin`:
 - Email: `red@admin.org`
 - Password: `tenet`
-- Organization: `PQR Org.`
+- Organization: `PQR Corporation`
 
 `manager`:
 - Email: `red@manager.org`
