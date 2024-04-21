@@ -2,35 +2,50 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Access the [webpage for user-management-application](https://user-management-application-qhphjsfb1.vercel.app/) here.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I made some dummy data to understand this.
+Here are some loginInfo for dummy logins: ( Note: You cannot change password or register with this data, because mails are not real, so one won't be able to successfully verify. )
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`admin`:
+- Email: `red@admin.org`
+- Password: `tenet`
+- Organization: `PQR Corporation`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+`manager`:
+- Email: `red@manager.org`
+- Password: `tenet`
+- Organization: `ABC Inc.`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`user`:
+- Email: `red@user.org`
+- Password: `tenet`
+- Organization: `ABC Inc.`
 
-## Learn More
+## Understanding the Pages
 
-To learn more about Next.js, take a look at the following resources:
+- LoginPage: It asks for `Email`, `Password` and `Organization` details for login. You can only `login` after `registration` and `email verification`.
+- RegisterPage: It asks for `Full Name`, `Email`, `Password` and `Organization` details for registering. You `cannot register if you are verified with this email with this organization`.
+  You can `register with same email but for another organization` but again verifying your email.
+- ResetPage: It asks for `Email` and `Organization` details for `password-reset`. Will send a mail with a link for resetting the password.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## After Successful Login
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Dashboard: The user dashboard shows information about the current logged in user's `Name`, `Email`, `Organization` and `Permission` (which is given by role)
+- There are two buttons on the dashboard:
+  1) Fetch Data: This button fetches the data of all members present in the database ( however, it somehow depends on the user role ).
+  2) Log Out: Moves out of the session and sign out the user.
+
+## Understanding the Roles
+
+- Roles are of 3 types:
+- `admin` 2) `manager` 3) `user` (by default every new user added in database is given `user` role)
+- `admin`: I limit the `admin` to only be one user, who can maintain positions, roles and even delete any data from the database. This role has no scope of boundaries.
+- `manager`: This role is given to the head of a single organization ( like moderators, given to zero or many users ). The user can only fetch list of data from his organization.
+- `user`: This is the default role given to every new user, which can be changed by manager and admin.
+- Both `user` can fetch data of their organization, but admin has no limit of scope.
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
+I used Vercel to deploy the Nextjs application.
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
