@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Access the [webpage for user-management-application](https://user-management-application-qhphjsfb1.vercel.app/) here.
 
-I used some dummy data to understand this.
+I made some dummy data to understand this.
 Here are some loginInfo for dummy logins: ( Note: You cannot change password or register with this data, because mails are not real, so one won't be able to successfully verify. )
 
 `admin`:
