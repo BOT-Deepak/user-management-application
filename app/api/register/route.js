@@ -2,7 +2,7 @@
 
 import { NextResponse } from "next/server";
 import db from '../../firebaseConfig';
-import { collection, addDoc } from "firebase/firestore";
+import { query, collection, addDoc, where } from "firebase/firestore";
 
 // POST() function to register the user into the database
 
@@ -10,6 +10,23 @@ export async function POST(req) {
 
     try {
         const { name, email, password, organization } = await req.json();
+
+        const q = query(collection(db, 'users'), where("email", "==", email), where("organization", "==", organization));
+        const querySnapshot = await getDocs(q);
+
+        let rep = "";
+
+        querySnapshot.forEach((doc) => {
+            rep = doc.id;
+        })
+
+        if(rep != "") {
+            return NextResponse.json(
+                { docid: rep },
+                { message: 'User already present.' },
+                { status: 201 },
+            );
+        }
 
         // adding docuement with data, into a collection named 'users'
 

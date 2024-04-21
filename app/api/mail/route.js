@@ -21,10 +21,12 @@ export async function POST(req) {
     const confirmationLink = `${process.env.DOMAIN_NAME}/${sendL}?token=${token}&mail=${email}&org=${organization}`;
 
     let messageSubject = "Verify your email";
+    let messageOrganization = `Requested to join organization: ${organization}`;
     let messageLinkSpace = `Click <a href="${confirmationLink}">here<a/> to verify your email with ${organization}`;
 
     if(sendL == "password-reset") {
         messageSubject = "Reset your password";
+        messageOrganization = `Organization: ${organization}`;
         messageLinkSpace = `Click <a href="${confirmationLink}">here<a/> to reset your password with ${organization}`;
     }
 
@@ -38,7 +40,7 @@ export async function POST(req) {
             <h1>Welcome to Deepak's User Managerment Application</h1>
             <h3>Here are your details!</h3>
             <h3>Email: ${email}</h3>
-            <h3>Requested to join organization: ${organization}</h3>
+            <h3>${messageOrganization}</h3>
             <h3>${messageLinkSpace}</h3>
             </div>`,
         })

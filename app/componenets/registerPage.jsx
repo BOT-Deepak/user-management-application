@@ -40,9 +40,10 @@ export default function RegisterForm() {
             })
 
             const { data, message, status } = await user_exists.json();
+            const { verified } = data;
             
             // if user exists, then return;
-            if(data == true) {
+            if(verified == "true") {
                 toast.warning(`Email with ${organization}, already exists!`);
                 return;
             }
