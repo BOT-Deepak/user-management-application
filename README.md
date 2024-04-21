@@ -10,17 +10,17 @@ Here are some loginInfo for dummy logins: ( Note: You cannot change password or 
 `admin`:
 - Email: `red@admin.org`
 - Password: `tenet`
-- Organization: `admin.org`
+- Organization: `PQR Org.`
 
 `manager`:
 - Email: `red@manager.org`
 - Password: `tenet`
-- Organization: `pokemon.org`
+- Organization: `ABC Inc.`
 
 `user`:
 - Email: `red@user.org`
 - Password: `tenet`
-- Organization: `pokemon.org`
+- Organization: `ABC Inc.`
 
 ## Understanding the Pages
 
