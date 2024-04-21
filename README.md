@@ -15,12 +15,12 @@ Here are some loginInfo for dummy logins: ( Note: You cannot change password or 
 `manager`:
 - Email: `red@manager.org`
 - Password: `tenet`
-- Organization: `manager.org`
+- Organization: `pokemon.org`
 
 `user`:
 - Email: `red@user.org`
 - Password: `tenet`
-- Organization: `user.org`
+- Organization: `pokemon.org`
 
 ## Understanding the Pages
 
