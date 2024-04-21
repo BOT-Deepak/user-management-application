@@ -18,7 +18,7 @@ export async function POST(req) {
         console.log('User data updated with id: ', rep);
 
         return NextResponse.json(
-            { message: 'User registered.' },
+            { message: 'User data updated.' },
             { status: 201 },
         );
     } catch(e) {

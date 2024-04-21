@@ -25,7 +25,7 @@ export async function POST(req) {
         
         return NextResponse.json(
             { data: userExists },
-            { message: 'User registered.' },
+            { message: 'User Exists found.' },
             { status: 201 },
         );
         
